@@ -10,7 +10,7 @@ import { useScroll, animated } from "@react-spring/web";
 export default function Home() {
   const CARDS = 3;
   const ref = useRef(null);
-  var pages = 3;
+  var pages = 2;
   var waitlist_offset = 2.5;
   var waitlist_size = 0.5;
   useEffect(() => {
@@ -52,9 +52,9 @@ export default function Home() {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          speed={0.1}
+          speed={0.5}
           offset={1}
-          factor={1.5}
+          factor={1}
           className="max-sm:text-base flex flex-col items-center justify-center bg-stone-800"
         >
           <div className="custom-shape-divider-top-1687794491 overflow-visible">
@@ -130,14 +130,14 @@ export default function Home() {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer
+        {/* <ParallaxLayer
           className="flex items-center justify-center h-screen"
           speed={0.5}
           offset={waitlist_offset}
           factor={waitlist_size}
         >
           <WaitList />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
       </Parallax>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
